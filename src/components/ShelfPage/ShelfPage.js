@@ -27,6 +27,13 @@ function ShelfPage() {
     setDescription('');
   }
 
+  function deleteItem(book) {
+    dispatch({
+      type: 'REMOVE_ITEM',
+      payload: book
+    });
+  }
+
 
   return (
     <div className="container">
@@ -48,7 +55,7 @@ function ShelfPage() {
               <tr key={book.id}>
                 <td className="description">{book.description}</td>
                 <td><img src={book.image_url} /></td>
-                <td><button className="deleteButton">Remove Item</button></td>
+                <td>{book.user_id === userId && <button onClick={() => deleteItem(book)} className="deleteButton">Remove Item</button>}</td>
               </tr>
 
   );

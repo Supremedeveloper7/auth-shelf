@@ -1,0 +1,26 @@
+table, th, td {
+    border: 5px solid black;
+}
+
+td, th {
+    width: 10%;
+    height: 10%;
+}
+
+table {
+    margin: 100px;
+    border-collapse: collapse;
+}
+
+img {
+    width: 100%;
+}
+
+.description {
+    text-align: center;
+}
+
+.deleteButton {
+    margin-left: 80px;
+    font-size: 20px;
+}
